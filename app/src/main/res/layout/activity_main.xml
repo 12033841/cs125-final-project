@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click the button to begin"
+        android:text="@string/app_nameClick the button to begin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -18,19 +18,26 @@
 
     <Button
         android:id="@+id/Begin"
-        android:layout_width="151dp"
-        android:layout_height="93dp"
+        android:layout_width="147dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="48dp"
         android:onClick="sendMessage"
-        android:text="Begin"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="286dp" />
+        android:text="@string/bottom_sheet_behavior"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="162dp"
         android:layout_height="145dp"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="72dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="76dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
 </android.support.constraint.ConstraintLayout>
