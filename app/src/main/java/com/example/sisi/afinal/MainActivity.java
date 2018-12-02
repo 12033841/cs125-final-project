@@ -14,9 +14,18 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
 import org.json.JSONObject;
 
+import edu.illinois.cs.cs125.lab11.DisplayMessageActivity;
+
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     /** Default logging tag for messages from the main activity. */
     private static final String TAG = "fianl project";
 
@@ -29,8 +38,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     /** Called when the user taps the Send button */
+    /** Called when the user taps the Send button */
     public void sendMessage(View view) {
-        return;
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.editText);
+        String message = editText.getText().toString();
+        Intent intent1 = intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
     /**
      * Make an API call.
