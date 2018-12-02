@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    /** Called when the user taps the Send button */
+    public void sendMessage(View view) {
+        return;
+    }
     /**
      * Make an API call.
      */
@@ -52,6 +56,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        public class
     }
 }
